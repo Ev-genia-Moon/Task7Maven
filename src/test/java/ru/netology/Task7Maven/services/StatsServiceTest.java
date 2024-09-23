@@ -12,13 +12,13 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expected = 180;
 
         //  вызываем целевой метод:
-        int sumAllSales = service.sumOffAllSales(sales);
+        long sumAllSales = service.sumOffAllSales(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expected, sumAllSales);
@@ -29,13 +29,13 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expected = 15;
 
         //  вызываем целевой метод:
-        int averageSales = service.averageSalesPerMonth(sales);
+        long averageSales = service.averageSalesPerMonth(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expected, averageSales);
@@ -46,7 +46,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expected = 8;
@@ -63,7 +63,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expected = 9;
@@ -80,14 +80,13 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expected = 5;
 
         //  вызываем целевой метод:
-        int averageSales = service.averageSalesPerMonth(sales);
-        int numberBelowAverage = service.numberMonthsOfSalesBelowAverage(sales, averageSales);
+        int numberBelowAverage = service.numberMonthsOfSalesBelowAverage(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expected, numberBelowAverage);
@@ -98,14 +97,13 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expected = 5;
 
         //  вызываем целевой метод:
-        int averageSales = service.averageSalesPerMonth(sales);
-        int numberAboveAverage = service.numberMonthsOfSalesAboveAverage(sales, averageSales);
+        int numberAboveAverage = service.numberMonthsOfSalesAboveAverage(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expected, numberAboveAverage);

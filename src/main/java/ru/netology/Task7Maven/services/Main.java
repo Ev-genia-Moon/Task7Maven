@@ -6,16 +6,16 @@ public class Main {
     public static void main(String[] args) {
         StatsService service = new StatsService();
 
-        int[] sales = {
+        long[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
         System.out.println(Arrays.toString(sales));
 
-        int sumAllSales = service.sumOffAllSales(sales);
+        long sumAllSales = service.sumOffAllSales(sales);
         System.out.println("Сумма всех пордаж: " + sumAllSales);
 
-        int averageSales = service.averageSalesPerMonth(sales);
+        long averageSales = service.averageSalesPerMonth(sales);
         System.out.println("Средняя сумма продаж в месяц: " + averageSales);
 
         int maximumSales = service.maxSales(sales);
@@ -24,10 +24,10 @@ public class Main {
         int minimumSales = service.minSales(sales);
         System.out.println("Номер месяца, в котором был минимум продаж, то есть осуществлены продажи на минимальную сумму: " + minimumSales);
 
-        int numberBelowAverage = service.numberMonthsOfSalesBelowAverage(sales, averageSales);
+        int numberBelowAverage = service.numberMonthsOfSalesBelowAverage(sales);
         System.out.println("Количество месяцев, в которых продажи были ниже среднего: " + numberBelowAverage);
 
-        int numberAboveAverage = service.numberMonthsOfSalesAboveAverage(sales, averageSales);
+        int numberAboveAverage = service.numberMonthsOfSalesAboveAverage(sales);
         System.out.println("Количество месяцев, в которых продажи были выше среднего: " + numberAboveAverage);
 
     }
