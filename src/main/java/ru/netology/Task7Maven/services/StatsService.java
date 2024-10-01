@@ -6,8 +6,10 @@ import static java.lang.Long.sum;
 
 public class StatsService {
     public long sumOffAllSales(long[] sales) {
-        long sumSales;
-        sumSales = Arrays.stream(sales).sum(); // сумма всех продаж
+        long sumSales = 0;
+        for (int i = 0; i < sales.length; i++) {
+            sumSales = sumSales + sales[i]; //сумма всех продаж
+        }
         return sumSales;
     }
 
